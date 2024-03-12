@@ -35,15 +35,16 @@
             this.mlastnamefield = new System.Windows.Forms.TextBox();
             this.labelmlastname = new System.Windows.Forms.Label();
             this.textBoxdata = new System.Windows.Forms.TextBox();
-            this.textBoxbirthday = new System.Windows.Forms.TextBox();
             this.labelbirthday = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.labelid = new System.Windows.Forms.Label();
             this.buttonaddstudent = new System.Windows.Forms.Button();
-            this.textBoxgrade = new System.Windows.Forms.TextBox();
             this.labelgrade = new System.Windows.Forms.Label();
             this.textBoxcareer = new System.Windows.Forms.TextBox();
             this.labelcareer = new System.Windows.Forms.Label();
+            this.numericGRADE = new System.Windows.Forms.NumericUpDown();
+            this.dateTimebirthday = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.numericGRADE)).BeginInit();
             this.SuspendLayout();
             // 
             // labelname
@@ -107,14 +108,6 @@
             this.textBoxdata.TabIndex = 6;
             this.textBoxdata.TextChanged += new System.EventHandler(this.textBoxdata_TextChanged);
             // 
-            // textBoxbirthday
-            // 
-            this.textBoxbirthday.Location = new System.Drawing.Point(75, 141);
-            this.textBoxbirthday.Name = "textBoxbirthday";
-            this.textBoxbirthday.Size = new System.Drawing.Size(100, 23);
-            this.textBoxbirthday.TabIndex = 8;
-            this.textBoxbirthday.TextChanged += new System.EventHandler(this.textBoxbirthday_TextChanged);
-            // 
             // labelbirthday
             // 
             this.labelbirthday.AutoSize = true;
@@ -151,13 +144,6 @@
             this.buttonaddstudent.UseVisualStyleBackColor = true;
             this.buttonaddstudent.Click += new System.EventHandler(this.buttonaddstudent_Click);
             // 
-            // textBoxgrade
-            // 
-            this.textBoxgrade.Location = new System.Drawing.Point(436, 141);
-            this.textBoxgrade.Name = "textBoxgrade";
-            this.textBoxgrade.Size = new System.Drawing.Size(65, 23);
-            this.textBoxgrade.TabIndex = 13;
-            // 
             // labelgrade
             // 
             this.labelgrade.AutoSize = true;
@@ -183,19 +169,35 @@
             this.labelcareer.TabIndex = 14;
             this.labelcareer.Text = "Career";
             // 
+            // numericGRADE
+            // 
+            this.numericGRADE.Location = new System.Drawing.Point(449, 141);
+            this.numericGRADE.Name = "numericGRADE";
+            this.numericGRADE.Size = new System.Drawing.Size(43, 23);
+            this.numericGRADE.TabIndex = 16;
+            this.numericGRADE.ValueChanged += new System.EventHandler(this.numericGRADE_ValueChanged);
+            // 
+            // dateTimebirthday
+            // 
+            this.dateTimebirthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimebirthday.Location = new System.Drawing.Point(50, 141);
+            this.dateTimebirthday.Name = "dateTimebirthday";
+            this.dateTimebirthday.Size = new System.Drawing.Size(148, 23);
+            this.dateTimebirthday.TabIndex = 17;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dateTimebirthday);
+            this.Controls.Add(this.numericGRADE);
             this.Controls.Add(this.textBoxcareer);
             this.Controls.Add(this.labelcareer);
-            this.Controls.Add(this.textBoxgrade);
             this.Controls.Add(this.labelgrade);
             this.Controls.Add(this.buttonaddstudent);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.labelid);
-            this.Controls.Add(this.textBoxbirthday);
             this.Controls.Add(this.labelbirthday);
             this.Controls.Add(this.textBoxdata);
             this.Controls.Add(this.mlastnamefield);
@@ -206,6 +208,7 @@
             this.Controls.Add(this.labelname);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.numericGRADE)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,14 +223,14 @@
         private TextBox mlastnamefield;
         private Label labelmlastname;
         private TextBox textBoxdata;
-        private TextBox textBoxbirthday;
         private Label labelbirthday;
         private TextBox textBoxID;
         private Label labelid;
         private Button buttonaddstudent;
-        private TextBox textBoxgrade;
         private Label labelgrade;
         private TextBox textBoxcareer;
         private Label labelcareer;
+        private NumericUpDown numericGRADE;
+        private DateTimePicker dateTimebirthday;
     }
 }

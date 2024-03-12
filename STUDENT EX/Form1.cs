@@ -32,14 +32,14 @@ namespace STUDENT_EX
             lastnamefield.Clear();
             x.MlastName = mlastnamefield.Text;
             mlastnamefield.Clear();
-            x.Birthday = Convert.ToDateTime(textBoxbirthday.Text);
-            textBoxbirthday.Clear();
+            x.Birthday = Convert.ToDateTime(dateTimebirthday.Text);
+            dateTimebirthday.Text = DateTime.Now.ToString();
             x.Id = textBoxID.Text;
             textBoxID.Clear();
             x.Career = textBoxcareer.Text;
             textBoxcareer.Clear();
-            x.Grade = Convert.ToDouble(textBoxgrade.Text);
-            textBoxgrade.Clear();
+            x.Grade = Convert.ToDouble(numericGRADE.Text);
+            numericGRADE = new NumericUpDown();
             fulldata = x.ToString();
             list.Add(x);
             String datalist = "";
@@ -60,6 +60,11 @@ namespace STUDENT_EX
 
         private void textBoxID_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        private void numericGRADE_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
